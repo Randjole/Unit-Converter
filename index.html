@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="converter">
+            <div class="input-section">
+                <a>lenght</a>
+                <a href="file:///Users/macdj/Unit-Converter/weight.html">weight</a>
+                <a href="file:///Users/macdj/Unit-Converter/temperature.html">temperature</a>
+                <br>
+                <br>
+                <label for="lenghtConvert">Enter the lenght to convert </label><br>
+                <input type="number" id="len" placeholder="lenght"><br>
+                <br>
+                <label for="inputUnitFrom">Unite to Convert from </label><br>
+                <select id='inputUnitFrom'>
+                    <option value='meters'>Meters</option>
+                    <option value='kilometers'>Kilometers</option>
+                    <option value='miles'>Miles</option>
+                    <option value='feet'>Feet</option>
+                    <option value='inches'>Inches</option>
+                    <option value='centimeters'>Centimeters</option>
+                    <option value='millimeters'>Millimeters</option>
+                    <option value='yards'>Yards</option>
+                </select>
+            </div>
+            <div>
+                <label for="inputUnitTo">Unite to Convert to </label><br>
+                <select id="inputUnitTo">
+                    <option value='meters'>Meters</option>
+                    <option value='kilometers'>Kilometers</option>
+                    <option value='miles'>Miles</option>
+                    <option value='feet'>Feet</option>
+                    <option value='inches'>Inches</option>
+                    <option value='centimeters'>Centimeters</option>
+                    <option value='millimeters'>Millimeters</option>
+                    <option value='yards'>Yards</option>
+                </select>
+                <div>
+                    <br>
+                    <input type="text" id="outputValue" placeholder="Converted value" readonly />
+                </div>
+                <script>
+
+                    function converterU() {
+
+                        const lengthToConvert = parseFloat(document.getElementById('len').value); // Corrected id here
+                        const inputUnitF = document.getElementById('inputUnitFrom').value;
+                        const inputUnitT = document.getElementById('inputUnitTo').value;
+                        const outputValue = document.getElementById('outputValue');
+
+
+                        if (inputUnitF === 'meters') {
+                            if (inputUnitT === 'meters') {
+                                outputValue.value = "It's the same";
+                            }
+                            if (inputUnitT === 'kilometers') {
+                                outputValue.value = lengthToConvert / 1000;
+                            }
+                            if (inputUnitT === 'miles') {
+                                outputValue.value = lengthToConvert / 1609;
+                            }
+                            if (inputUnitT === 'feet') {
+                                outputValue.value = lengthToConvert * 3281;
+                            }
+                            if (inputUnitT === 'inches') {
+                                outputValue.value = lengthToConvert * 39.37;
+                            }
+                            if (inputUnitT === 'centimeters') {
+                                outputValue.value = lengthToConvert * 100;
+                            }
+                            if (inputUnitT === 'millimeters') {
+                                outputValue.value = lengthToConvert * 1000;
+                            }
+                            if (inputUnitT === 'yards') {
+                                outputValue.value = lengthToConvert * 1.0936132983;
+                            }
+
+                        }
+
+                        if (inputUnitF === 'kilometers') {
+                            if (inputUnitT === 'meters') {
+                                outputValue.value = lengthToConvert * 1000;
+                            }
+                            if (inputUnitT === 'kilometers') {
+                                outputValue.value = "It's the same ";
+                            }
+                            if (inputUnitT === 'miles') {
+                                outputValue.value = lengthToConvert / 1609;
+                            }
+                            if (inputUnitT === 'feet') {
+                                outputValue.value = lengthToConvert * 3281;
+                            }
+                            if (inputUnitT === 'inches') {
+                                outputValue.value = lengthToConvert * 39370;
+                            }
+                            if (inputUnitT === 'centimeters') {
+                                outputValue.value = lengthToConvert * 100000;
+                            }
+                            if (inputUnitT === 'millimeters') {
+                                outputValue.value = lengthToConvert * 1e+6;
+                            }
+                            if (inputUnitT === 'yards') {
+                                outputValue.value = lengthToConvert * 1093.6133;
+                            }
+
+                        }
+
+                        if (inputUnitF === 'miles') {
+                            if (inputUnitT === 'meters') {
+                                outputValue.value = lengthToConvert * 1;
+                            }
+                            if (inputUnitT === 'kilometers') {
+                                outputValue.value = "It's the same ";
+                            }
+                            if (inputUnitT === 'miles') {
+                                outputValue.value = lengthToConvert / 1609;
+                            }
+                            if (inputUnitT === 'feet') {
+                                outputValue.value = lengthToConvert * 3281;
+                            }
+                            if (inputUnitT === 'inches') {
+                                outputValue.value = lengthToConvert * 39370;
+                            }
+                            if (inputUnitT === 'centimeters') {
+                                outputValue.value = lengthToConvert * 100000;
+                            }
+                            if (inputUnitT === 'millimeters') {
+                                outputValue.value = lengthToConvert * 1e+6;
+                            }
+                            if (inputUnitT === 'yards') {
+                                outputValue.value = lengthToConvert * 1093.6133;
+                            }
+
+                        }
+                    }
+                </script>
+                <button onclick="converterU()">Click me</button>
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>

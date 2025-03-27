@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+    <h1>Unit Converter</h1>
+
+    <div>
+        <label for="lengthCon">Enter the length to convert </label><br>
+        <input type="number" id="lengthCon" placeholder=""><br>
+
+        <label for="inputUnitFrom">Unit to Convert from </label><br>
+        <select id='inputFrom'>
+            <option value="meter">Meters</option>
+            <option value='kilometers'>Kilometers</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="inputUnitTo">Unit to Convert to </label><br>
+        <select id="inputTo">
+            <option value="meter">Meters</option>
+            <option value='kilometers'>Kilometers</option>
+        </select>
+        <div>
+            <br>
+            <input type="text" id="outputValue" placeholder="" readonly />
+        </div>
+    </div>
+
+    <div>
+        <script>
+            function converterU() {
+
+                const lengthToConvert = parseFloat(document.getElementById('lengthCon').value); // Corrected id here
+                const inputUnitF = document.getElementById('inputFrom').value;
+                const inputUnitT = document.getElementById('inputTo').value;
+                const outputValue = document.getElementById('outputValue');
+
+
+                if (inputUnitF === 'meter') {
+                    if (inputUnitT === 'meter') {
+                        outputValue.value = lengthToConvert / 10;
+                    }
+                    if (inputUnitT === 'kilometers') {
+                        outputValue.value = lengthToConvert * 100;
+                    }
+                }
+
+            }
+        </script>
+        <button onclick="converterU()">Click me</button>
+    </div>
+
+</body>
+
+</html>

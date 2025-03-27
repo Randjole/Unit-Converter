@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="shortcut icon" href="">
+</head>
+
+
+
+<body>
+    <h1>Unit Converter</h1>
+    <div>
+        <a href="file:///Users/macdj/Unit-Converter/index.html">lenght</a>
+        <a href="file:///Users/macdj/Unit-Converter/weight.html">weight</a>
+        <a>temperature</a>
+    </div><br>
+
+    <div>
+        <label for="lenghtConvert">Enter the lenght to convert </label><br>
+        <input type="text" id="lenght" placeholder=""><br>
+
+        <label for="inputUnitFrom">Unite to Convert from </label><br>
+        <select id='inputFrom'>
+            <option value="meter">Meters</option>
+            <option value='kilometers'>Kilometers</option>
+            <option value='miles'>Miles</option>
+            <option value='feet'>Feet</option>
+            <option value='inches'>Inches</option>
+            <option value='centimeters'>Centimeters</option>
+            <option value='millimeters'>Millimeters</option>
+            <option value='yards'>Yards</option>
+        </select>
+    </div>
+    <div>
+        <label for="inputUnitTo">Unite to Convert to </label><br>
+        <select id="inputTo">
+            <option value="meter">Meters</option>
+            <option value='kilometers'>Kilometers</option>
+            <option value='miles'>Miles</option>
+            <option value='feet'>Feet</option>
+            <option value='inches'>Inches</option>
+            <option value='centimeters'>Centimeters</option>
+            <option value='millimeters'>Millimeters</option>
+            <option value='yards'>Yards</option>
+        </select>
+        <div>
+            <br>
+            <input type="text" id="outputValue" placeholder="" readonly />
+        </div>
+
+        <div>
+
+            <script>
+
+                function converterU() {
+
+                    const lenghtToConvert = document.getElementById('lenght');
+                    const inputUnitF = document.getElementById('inputFrom');
+                    const inputUnitT = document.getElementById('inputTo');
+                    const outputVal = document.getElementById('outputValue');
+
+
+
+                    if (inputUnitF.value == 'meter') {
+                        if (inputUnitT.value == 'kilometers') {
+                            outputVal.value = lenghtToConvert.value / 1000;
+                        }
+
+                    }
+
+
+                    document.getElementById('outputValue').value = outputVal;
+
+
+                }
+
+            </script>
+            <button onclick="converterU()">Click me</button>
+        </div>
+
+
+
+
+</body>
+
+</html>
