@@ -3,58 +3,53 @@
 <html>
 
 <head>
-    <link rel="shortcut icon" href="">
+
 </head>
 
+
 <body>
-    <h1>Unit Converter</h1>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <div class="converter">
+            <div class="input-section">
+                <a href="file:///c%3A/Users/User/Unit-Converter/index.html">lenght</a>
+                <a>weight</a>
+                <a href="file:///c%3A/Users/User/Unit-Converter/temperature.html">temperature</a>
+                <br>
+                <br>
+                <label for="lenghtConvert">Enter the lenght to convert </label><br>
+                <input type="number" id="len" placeholder="lenght"><br>
+                <br>
+                <label for="inputUnitFrom">Unite to Convert from </label><br>
+                <select id='inputUnitFrom'>
+                    <option value='milligram'>Milligram</option>
+                    <option value='gram'>Gram</option>
+                    <option value='kilogram'>Kilogram</option>
+                    <option value='ounce'>Ounce</option>
+                    <option value='pound'>Pound</option>
+                </select>
+            </div>
+            <div>
+                <label for="inputUnitTo">Unite to Convert to </label><br>
+                <select id="inputUnitTo">
+                    <option value='milligram'>Milligram</option>
+                    <option value='gram'>Gram</option>
+                    <option value='kilogram'>Kilogram</option>
+                    <option value='ounce'>Ounce</option>
+                    <option value='pound'>Pound</option>
+                </select>
+                <div>
+                    <br>
+                    <input type="text" id="outputValue" placeholder="Converted value" readonly />
+                </div>
+                <script src="weight.js"></script>
 
-    <div>
-        <label for="lengthCon">Enter the length to convert </label><br>
-        <input type="number" id="lengthCon" placeholder=""><br>
+                <button onclick="converterU()">Click me</button>
 
-        <label for="inputUnitFrom">Unit to Convert from </label><br>
-        <select id='inputFrom'>
-            <option value="meter">Meters</option>
-            <option value='kilometers'>Kilometers</option>
-        </select>
-    </div>
+            </div>
 
-    <div>
-        <label for="inputUnitTo">Unit to Convert to </label><br>
-        <select id="inputTo">
-            <option value="meter">Meters</option>
-            <option value='kilometers'>Kilometers</option>
-        </select>
-        <div>
-            <br>
-            <input type="text" id="outputValue" placeholder="" readonly />
+
         </div>
-    </div>
-
-    <div>
-        <script>
-            function converterU() {
-
-                const lengthToConvert = parseFloat(document.getElementById('lengthCon').value); // Corrected id here
-                const inputUnitF = document.getElementById('inputFrom').value;
-                const inputUnitT = document.getElementById('inputTo').value;
-                const outputValue = document.getElementById('outputValue');
-
-
-                if (inputUnitF === 'meter') {
-                    if (inputUnitT === 'meter') {
-                        outputValue.value = lengthToConvert / 10;
-                    }
-                    if (inputUnitT === 'kilometers') {
-                        outputValue.value = lengthToConvert * 100;
-                    }
-                }
-
-            }
-        </script>
-        <button onclick="converterU()">Click me</button>
-    </div>
 
 </body>
 

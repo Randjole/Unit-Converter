@@ -11,76 +11,38 @@
 <body>
     <h1>Unit Converter</h1>
     <div>
-        <a href="file:///Users/macdj/Unit-Converter/index.html">lenght</a>
-        <a href="file:///Users/macdj/Unit-Converter/weight.html">weight</a>
+        <a href="file:///c%3A/Users/User/Unit-Converter/index.html">lenght</a>
+        <a href="file:///c%3A/Users/User/Unit-Converter/weight.html">weight</a>
         <a>temperature</a>
     </div><br>
-
+    <label for="lenghtConvert">Enter the lenght to convert </label><br>
+    <input type="number" id="len" placeholder="lenght"><br>
+    <br>
+    <label for="inputUnitFrom">Unite to Convert from </label><br>
+    <select id='inputUnitFrom'>
+        <option value='celsius'>Celsius</option>
+        <option value='fahrenheit'>Fahrenheit</option>
+        <option value='kelvin'>Kelvin</option>
+    </select>
+</div>
+<div>
+    <label for="inputUnitTo">Unite to Convert to </label><br>
+    <select id="inputUnitTo">
+        <option value='celsius'>Celsius</option>
+        <option value='fahrenheit'>Fahrenheit</option>
+        <option value='kelvin'>Kelvin</option>
+    </select>
     <div>
-        <label for="lenghtConvert">Enter the lenght to convert </label><br>
-        <input type="text" id="lenght" placeholder=""><br>
-
-        <label for="inputUnitFrom">Unite to Convert from </label><br>
-        <select id='inputFrom'>
-            <option value="meter">Meters</option>
-            <option value='kilometers'>Kilometers</option>
-            <option value='miles'>Miles</option>
-            <option value='feet'>Feet</option>
-            <option value='inches'>Inches</option>
-            <option value='centimeters'>Centimeters</option>
-            <option value='millimeters'>Millimeters</option>
-            <option value='yards'>Yards</option>
-        </select>
+        <br>
+        <input type="text" id="outputValue" placeholder="Converted value" readonly />
     </div>
-    <div>
-        <label for="inputUnitTo">Unite to Convert to </label><br>
-        <select id="inputTo">
-            <option value="meter">Meters</option>
-            <option value='kilometers'>Kilometers</option>
-            <option value='miles'>Miles</option>
-            <option value='feet'>Feet</option>
-            <option value='inches'>Inches</option>
-            <option value='centimeters'>Centimeters</option>
-            <option value='millimeters'>Millimeters</option>
-            <option value='yards'>Yards</option>
-        </select>
-        <div>
-            <br>
-            <input type="text" id="outputValue" placeholder="" readonly />
-        </div>
+    <script src="temperature.js"></script>
 
-        <div>
-
-            <script>
-
-                function converterU() {
-
-                    const lenghtToConvert = document.getElementById('lenght');
-                    const inputUnitF = document.getElementById('inputFrom');
-                    const inputUnitT = document.getElementById('inputTo');
-                    const outputVal = document.getElementById('outputValue');
+<button onclick="converterU()">Click me</button>
+</div>
 
 
-
-                    if (inputUnitF.value == 'meter') {
-                        if (inputUnitT.value == 'kilometers') {
-                            outputVal.value = lenghtToConvert.value / 1000;
-                        }
-
-                    }
-
-
-                    document.getElementById('outputValue').value = outputVal;
-
-
-                }
-
-            </script>
-            <button onclick="converterU()">Click me</button>
-        </div>
-
-
-
+</div>
 
 </body>
 
