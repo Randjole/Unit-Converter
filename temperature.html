@@ -11,8 +11,8 @@
 <body>
     <h1>Unit Converter</h1>
     <div>
-        <a href="file:///c%3A/Users/User/Unit-Converter/index.html">lenght</a>
-        <a href="file:///c%3A/Users/User/Unit-Converter/weight.html">weight</a>
+        <a href="file:///Users/macdj/Unit-Converter/index.html" target="_self">lenght</a>
+        <a href="file:///Users/macdj/Unit-Converter/weight.html" target="_self">weight</a>
         <a>temperature</a>
     </div><br>
     <label for="lenghtConvert">Enter the lenght to convert </label><br>
@@ -24,25 +24,25 @@
         <option value='fahrenheit'>Fahrenheit</option>
         <option value='kelvin'>Kelvin</option>
     </select>
-</div>
-<div>
-    <label for="inputUnitTo">Unite to Convert to </label><br>
-    <select id="inputUnitTo">
-        <option value='celsius'>Celsius</option>
-        <option value='fahrenheit'>Fahrenheit</option>
-        <option value='kelvin'>Kelvin</option>
-    </select>
-    <div>
-        <br>
-        <input type="text" id="outputValue" placeholder="Converted value" readonly />
     </div>
-    <script src="temperature.js"></script>
+    <div>
+        <label for="inputUnitTo">Unite to Convert to </label><br>
+        <select id="inputUnitTo">
+            <option value='celsius'>Celsius</option>
+            <option value='fahrenheit'>Fahrenheit</option>
+            <option value='kelvin'>Kelvin</option>
+        </select>
+        <div>
+            <br>
+            <input type="text" id="outputValue" placeholder="Converted value" readonly />
+        </div>
+        <script src="temperature.js"></script>
 
-<button onclick="converterU()">Click me</button>
-</div>
+        <button onclick="converterU()">Click me</button>
+    </div>
 
 
-</div>
+    </div>
 
 </body>
 
